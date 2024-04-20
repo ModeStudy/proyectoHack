@@ -1,0 +1,123 @@
+body {
+    background-color: #F6F6F6;
+    margin: 0;
+}
+
+/* Estilo para la barra superior */
+.barraSuperior {
+    height: 60px; /* Altura deseada */
+    background-color: white; /* Color de fondo */
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen */
+    padding: 0 20px; /* Espacio interno */
+    position: fixed; /* Barra superior fija */
+    top: 0; /* Alineación en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 2; /* Asegura que la barra superior esté por encima de la barra lateral */
+    border-bottom: solid rgba(210, 210, 210, 0.5);
+}
+
+.barraSuperior img {
+    height: 30px; /* Tamaño del logo pequeño */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilo para el texto "BIENVENIDO MARCO!" */
+.titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #682ABF;
+    font-size: 24px;
+}
+
+/* Ajusta la posición de la barra lateral */
+.barraLateral {
+    width: 60px;
+    height: calc(100% - 60px);
+    background-color: white;
+    position: fixed;
+    top: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    z-index: 1;
+    border-right: solid rgba(210, 210, 210, 0.5);
+}
+
+
+
+/* Estilo para el menú de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: block; /* Hace que los enlaces ocupen todo el espacio disponible */
+}
+
+/* Estilo para la opción "Cerrar Sesión" */
+.perfil {
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 20px; /* Alineación en la esquina inferior */
+    left: 25%; /* Alineación a la izquierda */
+    color: white;
+}
+
+.icono {
+    height: 30px;
+    padding-bottom: 15px;
+}
+
+.dashboard {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    height: 105vh;
+    width: 90vw;
+    background-color: #f5f5f5;
+}
+
+.caja {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 20%; /* Ajustamos el ancho para que siempre haya 4 tarjetas por fila */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.caja a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.caja:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    background-color: #f5dff6; /* Cambio de color de fondo */
+    transition: 0.3s; /* Transición suave */
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #682ABF;
+}

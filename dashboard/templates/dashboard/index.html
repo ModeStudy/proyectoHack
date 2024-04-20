@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
+    ">
+</head>
+
+<body>
+
+    <div class="barraSuperior">
+        <img src="{% static 'dashboard/images/logo.png' %}" alt="logo">
+        <div class="titulo">BIENVENIDO MARCO!</div>
+    </div>
+
+    <div class="contenido">
+        <div>
+            <div class="barraLateral">
+                <nav>
+                    <ul>
+                        <li><a href="../html/index.html"><img src="{% static 'dashboard/images/casa.png' %}" alt="dashboard"
+                                    class="icono"></a>
+                        </li>
+                        <li><a href="../html/alertas.html"><img src="{% static 'dashboard/images/alerta.png' %}" alt="alertas"
+                                    class="icono"></a>
+                        </li>
+                    </ul>
+                    <!-- Aquí va la opción "Cerrar Sesión" -->
+                    <p class="perfil"><a href="../html/perfil.html"><img src="{% static 'dashboard/images/perfil.png' %} alt="perfil"
+                                class="icono"></a></p>
+                </nav>
+            </div>
+
+            <div class="dashboard">
+                <div class="caja"><a href="" target="_blank"><h2>TRAFICO</h2>
+                    <div class="bar-chart">
+                        <h3>{{total_trafico}}</h3></a>
+                    </div>
+                </div>
+                <div class="caja">
+                    <h2>ACCIDENTE</h2>
+                    <div class="bar-chart">
+                        <h3>{{total_accidentes}}</h3>
+                    </div>
+                </div>
+                <div class="caja">
+                    <h2>GASOLINA</h2>
+                    <div class="bar-chart">
+                        <h3>{{total_gasolina}}</h3>
+                    </div>
+                </div>
+                <div class="caja">
+                    <h2>ASALTOS</h2>
+                    <div class="bar-chart">
+                        <h3>{{total_asaltos}}</h3>
+                    </div>
+                </div>
+                <div class="caja">
+                    <h2>CLIMA</h2>
+                    <div class="bar-chart">
+                        <h3>{{total_clima}}</h3>
+                    </div>
+                </div>
+                <div class="caja">
+                    <h2>FALLA MECANICA</h2>
+                    <div class="bar-chart">
+                        <h3>{{total_FallaMecanica}}</h3>
+                    </div>
+                </div>
+                <div class="caja">
+                    <h2>DOCUMENTACION   </h2>
+                    <div class="bar-chart">
+                        <h3>{{total_documentacion}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
