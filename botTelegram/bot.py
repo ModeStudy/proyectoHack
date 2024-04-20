@@ -7,8 +7,11 @@ posibles_escenarios = ["1","2","3","4","5","6","7"]
 informacion_incidencia = []
 preguntas_trafico = ["¿Cual es tu ubicacion actual?", "¿Describe la intensidad del trafico del 1 al 3?", "¿Cuanto tiempo llevas atorado en el trafico? (redondea a la hora mas cercana)"] 
 preguntas_accidente = ["¿Donde te encuentras?", "¿Que tan grave es el accidente del 1 al 3?"]
-
-
+preguntas_gasolina = ["¿Cuanto porcentaje de gasolina te queda del 1 al 100?", "¿Cuanto dinero tienes?", "¿Donde te encuentras?"]
+preguntas_asalto = ["donde estas", "¿Calcula el daño de la unidad?"]
+preguntas_clima = ["¿Donde te encuentras?", "¿Cual es el clima en el lugar?"]
+preguntas_FallaMecanica = ["¿Donde te encuentras?", "¿Describe la falla? descuida la ayuda ya va en camino"]
+preguntas_documentacion = ["¿Que documentacion te falta?"]
 preguntas = []
 preguntas = preguntas_trafico
 i = 0
@@ -54,20 +57,20 @@ def message(message):
             
         
 
-        """if message.text == "1":
-            bot.reply_to(message, "¿Donde te encuentras?")
+        if message.text == "1":
+            preguntas = preguntas_trafico
         if message.text == "2":
-            pass
+            preguntas = preguntas_accidente
         if message.text == "3":
-            pass
+            preguntas = preguntas_gasolina
         if message.text == "4":
-            pass
+            preguntas = preguntas_asalto
         if message.text == "5":
-            pass
+            preguntas = preguntas_clima
         if message.text == "6":
-            pass
+            preguntas = preguntas_FallaMecanica
         if message.text == "7":
-            pass"""
+            preguntas = preguntas_documentacion
 
 def guardar_txt():
     with open('informacion.txt', 'w') as file:

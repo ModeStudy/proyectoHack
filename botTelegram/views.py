@@ -21,7 +21,7 @@ def guardar_datos(request):
         incidencia.save()
 
     if int(contenido[0] == 4):
-       incidencia = Asaltos(Ubicacion = contenido[1], Fecha = datetime.now(), PerdidasEconomicas = contenido[3])
+       incidencia = Asaltos(Ubicacion = contenido[1], Fecha = datetime.now(), PerdidasEconomicas = contenido[2])
        incidencia.save()
 
     if int(contenido[0] == 5):
@@ -29,11 +29,11 @@ def guardar_datos(request):
        incidencia.save()
 
     if int(contenido[0] == 6):
-         incidencia = FallaMecanica(Ubicacion = contenido[1], Fecha = datetime.now(), Falla = contenido[3])
+         incidencia = FallaMecanica(Ubicacion = contenido[1], Fecha = datetime.now(), Falla = contenido[2])
          incidencia.save()
 
     if int(contenido[0] == 7):
-         incidencia = Documentacion(Fecha = datetime.now(), TipoDocumentacion = contenido[2])
+         incidencia = Documentacion(Fecha = datetime.now(), TipoDocumentacion = contenido[1])
          incidencia.save()
 
 def respuestas():
