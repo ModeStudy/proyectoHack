@@ -1,6 +1,4 @@
 import telebot
-from datetime import datetime
-from models import Trafico, Vehiculo, Operador
 
 bot = telebot.TeleBot('7196861055:AAFN74XNc_oP7Qx3TYl6r0Ii57JjfIG6JC4')
 recopilar_info = False
@@ -10,7 +8,9 @@ informacion_incidencia = []
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    guardar_BD()
+    guardar_txt()
+    posibles_escenarios.clear()
+    recopilar_info = False
 
 @bot.message_handler(func=lambda message : True)
 def message(message):
@@ -32,9 +32,9 @@ def message(message):
     else:
         informacion_incidencia.append(message.text)
 
-def guardar_BD():
-    if(informacion_incidencia[0] == 1):
-        guardar_incidente = Trafico(Ubicacion=informacion_incidencia[1], IntesidadTrafico=informacion_incidencia[2], Fecha = datetime.now())
-        guardar_incidente.save()
-        pass
+def guardar_txt():
+    with open('informacion.txt', 'w') as file:
+        for info in informacion_incidencia:
+            file.write(info + '\n')
+
 bot.polling()
