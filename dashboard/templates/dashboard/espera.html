@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Espera</title>
+    <link rel="stylesheet" href="{% static 'dashboard/css/styles_espera.css' %}">
+</head>
+<body>
+    <div class="barraSuperior">
+        <img src="{% static url 'dashboard/images/logo.png'%}" alt="logo">
+        <div class="titulo">LISTA DE ESPERA</div>
+    </div>
+
+    <div>
+        <div class="barraLateral">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'dash' %}"><img src="{% static 'dashboard/images/casa.png' %}" alt="dashboard" class="icono"></a>
+                    </li>
+                    <li><a href=""><img src="{% static 'dashboard/images/alerta.png' %}" alt="alertas" class="icono"></a>
+                    </li>
+                </ul>
+                <!-- Aquí va la opción "Cerrar Sesión" -->
+                <p class="perfil"><a href="{% url 'perfil' %}"><img src="{% static 'dashboard/images/perfil.png' %}../images/perfil.png" alt="perfil"
+                            class="icono"></a></p>
+            </nav>
+        </div>
+
+        <div class="dashboard">
+            <table border="0">
+                <tr id="datos">
+                    <th>No. de Empleado:</th>
+                    <th>Teléfono:</th>
+                    <th>Problema:</th>
+                </tr>
+                <tr id="informacionDatos">
+                    <td>123456</td>
+                    <td>4426696284</td>
+                    <td>Asalto</td>
+                </tr>
+                <tr id="datos">
+                    <th>No. de Empleado:</th>
+                    <th>Teléfono:</th>
+                    <th>Problema:</th>
+                </tr>
+                <tr id="informacionDatos">
+                    <td>123456</td>
+                    <td>4426696284</td>
+                    <td>Asalto</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

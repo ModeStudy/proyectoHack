@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from dashboard.views import dashboard
+from dashboard.views import dashboard, iniciar_sesion, espera, perfil
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dash-board/', dashboard, name= 'dash'),
+    path('iniciar_sesion/', iniciar_sesion, name = 'sesion'),
+    path('perfil/', perfil, name = 'perfil'),
+    path('espera/', espera, name = 'espera'),
 ]

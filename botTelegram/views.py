@@ -38,7 +38,6 @@ def guardar_datos(request):
 
 def respuestas():
     contenido = leer_archivo().split('\n')
-    pass
 
 def leer_archivo():
     content = open('informacion.txt', 'r')

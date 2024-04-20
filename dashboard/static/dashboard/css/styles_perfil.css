@@ -1,0 +1,111 @@
+body {
+    background-color: #F6F6F6;
+    margin: 0;
+}
+
+/* Estilo para la barra superior */
+.barraSuperior {
+    height: 60px; /* Altura deseada */
+    background-color: white; /* Color de fondo */
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen */
+    padding: 0 20px; /* Espacio interno */
+    position: fixed; /* Barra superior fija */
+    top: 0; /* Alineación en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 2; /* Asegura que la barra superior esté por encima de la barra lateral */
+    border-bottom: solid rgba(210, 210, 210, 0.5);
+}
+
+.barraSuperior img {
+    height: 30px; /* Tamaño del logo pequeño */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilo para el texto "BIENVENIDO MARCO!" */
+.titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #682ABF;
+    font-size: 24px;
+}
+
+/* Ajusta la posición de la barra lateral */
+.barraLateral {
+    width: 60px; /* Ancho de la barra lateral */
+    height: calc(100% - 60px); /* Altura ajustada para que no se superponga con la barra superior */
+    background-color: white; /* Color de fondo */
+    position: fixed; /* Barra lateral fija */
+    top: 60px; /* Alineación debajo de la barra superior */
+    padding-top: 20px; /* Espacio superior para evitar que el contenido se superponga */
+    padding-bottom: 20px; /* Espacio inferior */
+    overflow: hidden; /* Evita que el contenido exceda el área de la barra lateral */
+    z-index: 1; /* Asegura que la barra lateral esté detrás de la barra superior */
+    border-right: solid rgba(210, 210, 210, 0.5);
+}
+
+
+
+/* Estilo para el menú de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: block; /* Hace que los enlaces ocupen todo el espacio disponible */
+}
+
+/* Estilo para la opción "Cerrar Sesión" */
+.perfil {
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 20px; /* Alineación en la esquina inferior */
+    left: 25%; /* Alineación a la izquierda */
+    color: white;
+}
+
+.icono {
+    height: 30px;
+    padding-bottom: 15px;
+}
+.recuadro {
+    border: 2px solid purple; /* Borde de color púrpura */
+    padding: 20px; /* Espacio interno */
+    margin: 80px auto; /* Centra horizontalmente */
+    max-width: 70px; /* Ancho máximo del recuadro */
+    height:90px;
+    margin-top: 80px;
+
+    background-color: #F6F6F6; /* Color de fondo */}
+
+.contenidoPrincipal {
+    text-align: center; /* Centra horizontalmente el contenido */
+    padding: 0px; /* Espacio interno */
+    margin-top: 0px;
+    font-size: 10px; /* Tamaño de fuente */
+
+
+
+}
+
+/* Estilo para el botón "CERRAR SESIÓN" */
+.contenidoPrincipal button {
+    background-color: #682ABF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 0px;
+}
+
+.contenidoPrincipal button:hover {
+    background-color: #4A1A8B; /* Color de fondo al pasar el cursor */
+}

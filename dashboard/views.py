@@ -18,6 +18,20 @@ def dashboard(request):
                'total_documentacion' : total_documentacion}
     return HttpResponse(plantilla.render(context=context, request=request))
     
+def iniciar_sesion(request):
+    plantilla = loader.get_template('dashboard/inicioSesion.html')
+    context = {}
+    return HttpResponse(plantilla.render(context=context, request=request))
+
+def espera(request):
+    plantilla = loader.get_template('dashboard/espera.html')
+    context = {}
+    return HttpResponse(plantilla.render(context=context, request=request))
+
+def perfil(request):
+    plantilla = loader.get_template('dashboard/perfil.html')
+    context = {}
+    return HttpResponse(plantilla.render(context=context, request=request))
 
 """personajes = Personaje.objects.all()
     plantilla = loader.get_template('personajes/galeria.html')

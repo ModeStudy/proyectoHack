@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/styles.css' %}">
     ">
 </head>
 
@@ -22,15 +22,15 @@
             <div class="barraLateral">
                 <nav>
                     <ul>
-                        <li><a href="../html/index.html"><img src="{% static 'dashboard/images/casa.png' %}" alt="dashboard"
+                        <li><a href=""><img src="{% static 'dashboard/images/casa.png' %}" alt="dashboard"
                                     class="icono"></a>
                         </li>
-                        <li><a href="../html/alertas.html"><img src="{% static 'dashboard/images/alerta.png' %}" alt="alertas"
+                        <li><a href="{% url 'espera' %}"><img src="{% static 'dashboard/images/alerta.png' %}" alt="alertas"
                                     class="icono"></a>
                         </li>
                     </ul>
                     <!-- Aquí va la opción "Cerrar Sesión" -->
-                    <p class="perfil"><a href="../html/perfil.html"><img src="{% static 'dashboard/images/perfil.png' %} alt="perfil"
+                    <p class="perfil"><a href="¿"><img src="{% static 'dashboard/images/perfil.png' %} alt="perfil"
                                 class="icono"></a></p>
                 </nav>
             </div>

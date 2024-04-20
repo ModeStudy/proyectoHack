@@ -28,10 +28,10 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message : True)
 def message(message):
-    mensaje_respuesta = ""
     global i
     global recopilar_info
     global final
+    global preguntas
     if not recopilar_info: #si aun no recopila informacion verifica si ya ingreso un valor del 1 al 7
         bot.reply_to(message, """Hola en que te puedo ayudar: 
                     1- Trafico
@@ -46,6 +46,21 @@ def message(message):
             if message.text == escenario:
                 recopilar_info = True
                 informacion_incidencia.append(message.text)
+                
+                if message.text == "1":
+                        preguntas = preguntas_trafico
+                if message.text == "2":
+                    preguntas = preguntas_accidente
+                if message.text == "3":
+                    preguntas = preguntas_gasolina
+                if message.text == "4":
+                    preguntas = preguntas_asalto
+                if message.text == "5":
+                    preguntas = preguntas_clima
+                if message.text == "6":
+                    preguntas = preguntas_FallaMecanica
+                if message.text == "7":
+                    preguntas = preguntas_documentacion
     else:# se ejecutara cuando el usuario empieze a reporta informacion relevante
         informacion_incidencia.append(message.text)
         if not final:
@@ -54,23 +69,6 @@ def message(message):
             i = i +1
         else:
             final = True
-            
-        
-
-        if message.text == "1":
-            preguntas = preguntas_trafico
-        if message.text == "2":
-            preguntas = preguntas_accidente
-        if message.text == "3":
-            preguntas = preguntas_gasolina
-        if message.text == "4":
-            preguntas = preguntas_asalto
-        if message.text == "5":
-            preguntas = preguntas_clima
-        if message.text == "6":
-            preguntas = preguntas_FallaMecanica
-        if message.text == "7":
-            preguntas = preguntas_documentacion
 
 def guardar_txt():
     with open('informacion.txt', 'w') as file:

@@ -1,0 +1,31 @@
+body {
+    background-color: #F6F6F6;
+    margin: 0;
+}
+
+/* Estilo para la barra superior */
+.barraSuperior {
+    height: 60px; /* Altura deseada */
+    background-color: white; /* Color de fondo */
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen */
+    padding: 0 20px; /* Espacio interno */
+    position: fixed; /* Barra superior fija */
+    top: 0; /* Alineación en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 2; /* Asegura que la barra superior esté por encima de la barra lateral */
+    border-bottom: solid rgba(210, 210, 210, 0.5);
+}
+
+.barraSuperior img {
+    height: 50px; /* Tamaño del logo pequeño */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilo para el texto "BIENVENIDO MARCO!" */
+.titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #682ABF;
+    font-size: 30px;
+}

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'dashboard/css/styles_perfil.css' %}">
+</head>
+
+<body>
+
+    <div class="barraSuperior">
+        <img src="{% static 'dashboard/images/logo.png' %}" alt="logo">
+        <div class="titulo">PERFIL</div>
+    </div>
+
+    <div class="barraLateral">
+        <nav>
+            <ul>
+                <li><a href="{% url 'dash' %}"><img src="{% static 'dashboard/images/casa.png' %}" alt="dashboard" class="icono"></a>
+                </li>
+                <li><a href="{% url 'espera' %}"><img src="{% static 'dashboard/images/alerta.png'%}" alt="alertas" class="icono"></a>
+                </li>
+            </ul>
+            <!-- Aquí va la opción "Cerrar Sesión" -->
+            <p class="perfil"><a href="#"><img src="{% url 'dashboard/images/perfil.png' %}" alt="perfil"
+                        class="icono"></a></p>
+        </nav>
+    </div>
+</div>
+<div class="recuadro">
+    <img src="tu_url_de_imagen_aqui" alt="Imagen" width="100">
+</div>
+</div>
+    <div class="contenidoPrincipal">
+        <!-- Aquí puedes agregar tus elementos de contenido principal -->
+        <!-- Por ejemplo, gráficos, tablas, widgets, etc. -->
+        
+        <!-- Agrega más contenido aquí -->
+        <h1>Nombre/s: Marco Antonio</p>
+        <p>Apellidos: Olvera Torres</p>
+        <p>No. Operador: 12345</p>
+        <p>Tel: 442 789 451</p>
+        <button>CERRAR SESIÓN</button>
+    
+    
+   
+    
+    
+
+</body>
+
+</html>
