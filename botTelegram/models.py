@@ -2,8 +2,8 @@ from django.db import models
 
 class Trafico(models.Model):
     Ubicacion = models.CharField(max_length=200)
-    IntensidadTrafico = models.IntegerField
-    Fecha = models.DateTimeField
+    IntensidadTrafico = models.IntegerField(default=0)
+    Fecha = models.DateTimeField(default=None)
 
     def __str__(self):
         return self.Ubicacion

@@ -8,6 +8,7 @@ informacion_incidencia = []
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
+    global recopilar_info
     guardar_txt()
     posibles_escenarios.clear()
     recopilar_info = False

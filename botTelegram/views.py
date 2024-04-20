@@ -9,9 +9,7 @@ def guardar_datos(request):
     # contenido = str(leer_archivo()).split()
     print(contenido)
     if(int(contenido[0]) == 1):
-        incidencia = Trafico(Ubicacion = contenido[1],
-                             IntesidadTrafico = contenido[2],
-                             Fecha = datetime.now())
+        incidencia = Trafico(Ubicacion = contenido[1], IntensidadTrafico = contenido[2], Fecha = datetime.now())
         incidencia.save()
  
 def leer_archivo():
