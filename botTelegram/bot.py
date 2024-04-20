@@ -10,7 +10,7 @@ informacion_incidencia = []
 def send_welcome(message):
     global recopilar_info
     guardar_txt()
-    posibles_escenarios.clear()
+    informacion_incidencia.clear()
     recopilar_info = False
 
 @bot.message_handler(func=lambda message : True)
